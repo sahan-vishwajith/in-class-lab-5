@@ -63,8 +63,16 @@ void quickSortIterative(int arr[],int start,int end){
 void printArr(int arr[], int n)
 {
     int i;
-    for (i = 0; i < n; ++i)
-        cout << arr[i] << " ";
+    cout<<"[";
+    for (i = 0; i < n; ++i) {
+        if (i==n-1){
+            cout << arr[i];
+        }
+        else{
+            cout << arr[i] << ",";
+        }
+    }
+    cout<<"]  ";
 }
 
 
@@ -72,7 +80,8 @@ void printArr(int arr[], int n)
 int main() {
     auto start = high_resolution_clock::now(); // get the starting time
 
-    
+    // run the program here
+    // ...
     int size=4;
     int arr[4]={7,3,5,2};
     for (int i=1;i<=size;i++){
@@ -85,17 +94,17 @@ int main() {
         quicksort(arr1,0,i-1);
         printArr(arr1,i);
         if (i%2==0){
-            int first=1/2;
+            int first=((i)/2)-1;
             int second=first+1;
-            cout<<"median "<<(arr1[first]+arr1[second])/2.0;
+            printf("%.1f\n", (arr1[first]+arr1[second])/2.0);
         }
         else{
-            cout<<"median " <<arr1[(i/2)];
+            printf("%.1f\n", (arr1[(i/2)])/1.0);
         }
-        cout<<endl;
+
     }
 
-   
+
     auto stop = high_resolution_clock::now(); // get the ending time
 
     auto duration = duration_cast<microseconds>(stop - start); // calculate the elapsed time
