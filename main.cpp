@@ -72,8 +72,7 @@ void printArr(int arr[], int n)
 int main() {
     auto start = high_resolution_clock::now(); // get the starting time
 
-    // run the program here
-    // ...
+    
     int size=4;
     int arr[4]={7,3,5,2};
     for (int i=1;i<=size;i++){
@@ -96,7 +95,7 @@ int main() {
         cout<<endl;
     }
 
-
+   
     auto stop = high_resolution_clock::now(); // get the ending time
 
     auto duration = duration_cast<microseconds>(stop - start); // calculate the elapsed time
